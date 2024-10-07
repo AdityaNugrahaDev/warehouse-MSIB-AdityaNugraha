@@ -7,19 +7,18 @@ $controller = new GudangController(); // Membuat objek GudangController
 $id = $_GET['id'] ?? null;
 $status = $_GET['status'] ?? null;
 
-if ($id && $status) {
+if ($id && $status !== null) {
     // Mengubah status gudang menggunakan metode dari controller
-    $result = $controller->ubahStatusGudang($id, $status); // Pastikan metode ini ada dalam GudangController
+    $result = $controller->ubahStatusGudang($id, $status); // Pastikan metode ubahStatusGudang ada di GudangController
 
     // Menentukan pesan berdasarkan hasil operasi
     if ($result) {
-        header('Location: DaftarGudang.php?status=success'); // Redirect ke daftar gudang dengan status sukses
+        header('Location: ../../index.php?status=success'); // Redirect ke daftar gudang dengan status sukses
     } else {
-        header('Location: DaftarGudang.php?status=error'); // Redirect dengan pesan error
+        header('Location: ../../index.php?status=error'); // Redirect dengan pesan error
     }
     exit;
 } else {
-    header('Location: DaftarGudang.php'); // Jika tidak ada ID atau status, kembali ke daftar gudang
+    header('Location: ../../index.php'); // Jika tidak ada ID atau status, kembali ke daftar gudang
     exit;
 }
-?>

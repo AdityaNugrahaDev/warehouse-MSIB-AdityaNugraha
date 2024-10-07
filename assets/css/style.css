@@ -20,12 +20,20 @@ header h2 {
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Memastikan border tidak digandakan */
     margin-bottom: 20px;
 }
 
-table th, table td {
-    border: 1px solid #dee2e6;
+table th {
+    background-color: #007bff; /* Warna latar belakang untuk header tabel */
+    color: white; /* Warna teks header */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dee2e6; /* Border untuk header tabel */
+}
+
+table td {
+    border: 1px solid #dee2e6; /* Border untuk sel tabel */
     padding: 10px;
     text-align: center;
 }

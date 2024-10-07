@@ -3,18 +3,32 @@ include_once(__DIR__ . '/../../controllers/GudangController.php'); // Mengimpor 
 
 $controller = new GudangController(); // Membuat objek GudangController
 
-// Cek apakah metode request adalah POST
+// Cek apakah metode request adalah POST untuk penghapusan gudang
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id']; // Mengambil ID gudang dari form
     $controller->hapusGudang($id); // Memanggil metode hapusGudang untuk menghapus data
-    header('Location: DaftarGudang.php'); // Mengarahkan kembali ke halaman daftar gudang setelah menghapus
+    header('Location: ../../index.php'); // Mengarahkan kembali ke halaman daftar gudang setelah menghapus
     exit; // Menghentikan eksekusi skrip
 }
 
-$gudang_id = $_GET['id']; // Mengambil ID gudang dari query string
+// Mengambil ID gudang dari query string
+$gudang_id = $_GET['id'] ?? null; // Menyimpan ID gudang dari URL
+
+if ($gudang_id === null) {
+    // Jika ID tidak ada di URL, arahkan kembali ke daftar gudang
+    header('Location: ../../index.php');
+    exit;
+}
+
 $gudangs = $controller->ambilGudang(); // Mengambil daftar gudang
 $current_gudang = array_filter($gudangs, fn($gudang) => $gudang['id'] == $gudang_id); // Mencari gudang yang sesuai dengan ID
 $current_gudang = reset($current_gudang); // Mengambil elemen pertama dari hasil filter
+
+if (!$current_gudang) {
+    // Jika gudang dengan ID tersebut tidak ditemukan, arahkan ke halaman daftar
+    header('Location: ../../index.php');
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +47,7 @@ $current_gudang = reset($current_gudang); // Mengambil elemen pertama dari hasil
         <form method="POST"> <!-- Form untuk konfirmasi penghapusan -->
             <input type="hidden" name="id" value="<?= $current_gudang['id'] ?>"> <!-- Input tersembunyi untuk ID gudang -->
             <button type="submit" class="btn btn-danger">Hapus</button> <!-- Tombol untuk menghapus gudang -->
-            <a href="DaftarGudang.php" class="btn btn-secondary">Kembali</a> <!-- Tombol untuk kembali ke halaman daftar gudang -->
+            <a href="../../index.php" class="btn btn-secondary">Kembali</a> <!-- Tombol untuk kembali ke halaman daftar gudang -->
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!-- Mengimpor Bootstrap JS -->

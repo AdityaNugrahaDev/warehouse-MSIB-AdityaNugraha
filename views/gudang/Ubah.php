@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Memanggil metode updateGudang untuk memperbarui data gudang
     $controller->updateGudang($id, $name, $location, $capacity, $opening_hour, $closing_hour);
-    header('Location: DaftarGudang.php'); // Mengarahkan kembali ke halaman daftar gudang setelah mengupdate
+    header('Location: ../../index.php'); // Mengarahkan kembali ke halaman daftar gudang setelah mengupdate
     exit; // Menghentikan eksekusi skrip
 }
 
@@ -64,7 +64,7 @@ $current_gudang = reset($current_gudang); // Mengambil elemen pertama dari hasil
                     <input type="time" class="form-control" id="closing_hour" name="closing_hour" value="<?= $current_gudang['closing_hour'] ?>" required> <!-- Input untuk waktu tutup -->
                 </div>
                 <button type="submit" class="btn btn-primary">Simpan</button> <!-- Tombol untuk menyimpan perubahan -->
-                <a href="DaftarGudang.php" class="btn btn-secondary">Kembali</a> <!-- Tombol untuk kembali ke halaman daftar gudang -->
+                <a href="../../index.php" class="btn btn-secondary">Kembali</a> <!-- Tombol untuk kembali ke halaman daftar gudang -->
             </form>
         </div>
     </main>

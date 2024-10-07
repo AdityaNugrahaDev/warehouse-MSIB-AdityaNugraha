@@ -14,7 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Memanggil metode tambahGudang untuk menyimpan data
     $controller->tambahGudang($name, $location, $capacity, $opening_hour, $closing_hour);
-    header('Location: DaftarGudang.php'); // Mengarahkan ke halaman daftar gudang setelah berhasil menambah
+    
+    // Mengarahkan ke halaman daftar gudang setelah berhasil menambah
+    header('Location: ../../index.php'); // Perbaiki jalur ke lokasi index.php di root folder
     exit; // Menghentikan eksekusi skrip
 }
 ?>
@@ -58,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <input type="time" class="form-control" id="closing_hour" name="closing_hour" required> <!-- Input untuk waktu tutup -->
                 </div>
                 <button type="submit" class="btn btn-primary">Simpan</button> <!-- Tombol untuk menyimpan data -->
-                <a href="DaftarGudang.php" class="btn btn-secondary">Kembali</a> <!-- Tombol untuk kembali ke halaman daftar gudang -->
+                <a href="../../index.php" class="btn btn-secondary">Kembali</a> <!-- Tombol untuk kembali ke halaman daftar gudang -->
             </form>
         </div>
     </main>
