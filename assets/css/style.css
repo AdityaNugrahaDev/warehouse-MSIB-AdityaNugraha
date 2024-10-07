@@ -1,95 +1,121 @@
-\/* Mengatur gaya umum untuk body */
-body {
-    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
-    background-color: #f8f9fa; /* Warna latar belakang */
-    margin: 0; /* Menghilangkan margin */
-    padding: 0; /* Menghilangkan padding */
+/* Memuat font Poppins dari Google Fonts */
+/* Anda tidak perlu menambahkan ini di CSS, tetapi ini dicontohkan sebagai informasi */
+/* Link ini seharusnya ada di bagian <head> HTML Anda: 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+*/
+
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* Gaya untuk container utama */
-.container {
-    max-width: 1200px; /* Lebar maksimal container */
-    margin: 0 auto; /* Pusatkan container */
-    padding: 20px; /* Padding di dalam container */
+/* Gaya untuk body */
+body {
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    background-color: #f8f9fa; /* Warna latar belakang yang lembut */
+}
+
+/* Gaya untuk header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h2 {
+    font-size: 2rem; /* Ukuran font default */
 }
 
 /* Gaya untuk tabel */
-.table {
-    border: 2px solid #ccc; /* Border tabel */
-    border-collapse: collapse; /* Menggabungkan border tabel */
-    width: 100%; /* Lebar tabel 100% */
-    margin-top: 20px; /* Margin atas untuk jarak dengan elemen lain */
+table {
+    width: 100%; /* Memastikan tabel menggunakan lebar penuh */
+    border-collapse: collapse; /* Menghilangkan spasi antara sel */
+    margin-bottom: 20px;
 }
 
-/* Gaya untuk header tabel */
-.table thead th {
-    background-color: #f0f0f0; /* Warna latar belakang header tabel */
-    font-weight: bold; /* Menebalkan teks header */
-    border: 2px solid #ccc; /* Border header tabel */
+table th, table td {
+    border: 1px solid #dee2e6; /* Border tabel */
+    padding: 10px; /* Padding untuk sel */
+    text-align: center; /* Rata tengah untuk teks */
 }
 
-/* Gaya untuk sel tabel */
-.table tbody td {
-    border: 2px solid #ccc; /* Border untuk sel tabel */
+/* Gaya untuk tombol */
+.btn {
+    display: inline-block;
+    padding: 10px 15px; /* Padding tombol */
+    font-size: 1rem; /* Ukuran font tombol */
+    text-decoration: none; /* Menghapus garis bawah */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
 }
 
-/* Gaya untuk baris yang dihover */
-.table tbody tr:hover {
-    background-color: #e0e0e0; /* Warna latar belakang saat hover */
+.btn-primary {
+    background-color: #007bff; /* Warna latar belakang tombol biru */
+    color: white; /* Warna teks tombol */
 }
 
-/* Gaya untuk status tabel */
-.table tbody td:nth-child(5) { /* Kolom Status */
-    text-transform: capitalize; /* Menyesuaikan teks menjadi huruf kecil pada huruf pertama */
+.btn-primary:hover {
+    background-color: #0056b3; /* Warna latar belakang saat hover */
 }
 
-/* Gaya untuk tombol kotak di pagination */
-.pagination .page-link {
-    border-radius: 0; /* Menghilangkan sudut melengkung */
+.btn-warning {
+    background-color: #ffc107; /* Warna latar belakang tombol kuning */
+    color: white; /* Warna teks tombol */
 }
 
-/* Gaya untuk tombol pagination */
-.pagination .page-item {
-    margin-left: 5px; /* Jarak antar tombol pagination */
+.btn-danger {
+    background-color: #dc3545; /* Warna latar belakang tombol merah */
+    color: white; /* Warna teks tombol */
 }
 
-/* Gaya untuk responsif */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px; /* Padding lebih kecil untuk mobile */
-    }
+.btn-success {
+    background-color: #28a745; /* Warna latar belakang tombol hijau */
+    color: white; /* Warna teks tombol */
+}
 
-    .table {
-        font-size: 0.9em; /* Ukuran font tabel lebih kecil */
-    }
+/* Navigasi Pagination */
+.pagination {
+    display: flex;
+    justify-content: center; /* Pusatkan navigasi */
+    list-style: none; /* Menghilangkan bullet list */
+    margin-top: 20px; /* Margin atas untuk navigasi */
+}
 
-    .pagination {
-        font-size: 0.8em; /* Ukuran font pagination lebih kecil */
-    }
-
-    .pagination .page-link {
-        padding: 5px 10px; /* Padding tombol pagination */
-    }
+.pagination li {
+    margin: 0 5px; /* Margin di antara item pagination */
 }
 
 /* Responsif untuk tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .table {
-        font-size: 0.95em; /* Ukuran font tabel untuk tablet */
+@media (max-width: 768px) {
+    header h2 {
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk tablet */
     }
 
-    .pagination {
-        font-size: 0.9em; /* Ukuran font pagination untuk tablet */
+    .btn {
+        width: 100%; /* Tombol mengambil lebar penuh */
+        margin-bottom: 10px; /* Spasi di bawah tombol */
+    }
+
+    table th,
+    table td {
+        font-size: 0.9rem; /* Ukuran font tabel lebih kecil untuk tablet */
     }
 }
 
-/* Responsif untuk desktop */
-@media (min-width: 1024px) {
-    .table {
-        font-size: 1em; /* Ukuran font tabel untuk desktop */
+/* Responsif untuk mobile */
+@media (max-width: 576px) {
+    header h2 {
+        font-size: 1.25rem; /* Ukuran font lebih kecil untuk mobile */
     }
 
-    .pagination {
-        font-size: 1em; /* Ukuran font pagination untuk desktop */
+    table th,
+    table td {
+        font-size: 0.85rem; /* Ukuran font tabel lebih kecil untuk mobile */
+        padding: 0.5rem; /* Padding tabel yang lebih kecil */
+    }
+
+    .btn {
+        padding: 8px 10px; /* Padding tombol yang lebih kecil */
     }
 }
