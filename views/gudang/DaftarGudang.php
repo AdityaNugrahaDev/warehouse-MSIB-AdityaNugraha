@@ -119,7 +119,7 @@ $gudangsForCurrentPage = array_slice($gudangs, $offset, $itemsPerPage); // Menga
             </nav>
         </main>
         <footer class="mt-4 text-center">
-            <p>&copy; 2024 Warehouse MSIB - PT Citra Gama Sakti made by Aditya Nugraha</p>
+            <p>&copy; 2024 Warehouse MSIB 7 - PT Citra Gama Sakti made by Aditya Nugraha</p>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-OmdEygKbW6I4Zp7mbJ6g4qI3bWy/tTS5lgPOrkAz5cgh0SO4Bq/UNyIYUtRoUog/" crossorigin="anonymous"></script> <!-- Mengimpor Bootstrap JS -->
