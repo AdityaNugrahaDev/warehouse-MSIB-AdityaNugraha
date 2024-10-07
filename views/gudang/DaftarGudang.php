@@ -66,8 +66,8 @@ $gudangsForCurrentPage = array_slice($gudangs, $offset, $itemsPerPage); // Menga
                         <th class="text-center">Lokasi</th>
                         <th class="text-center">Kapasitas</th>
                         <th class="text-center">Status</th>
-                        <th class="text-center">Waktu Buka</th>
-                        <th class="text-center">Waktu Tutup</th>
+                        <th class="text-center">Jam Buka</th>
+                        <th class="text-center">Jam Tutup</th>
                         <th></th>
                     </tr>
                 </thead>
