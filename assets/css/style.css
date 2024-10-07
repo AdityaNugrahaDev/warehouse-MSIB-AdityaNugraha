@@ -1,0 +1,95 @@
+\/* Mengatur gaya umum untuk body */
+body {
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    background-color: #f8f9fa; /* Warna latar belakang */
+    margin: 0; /* Menghilangkan margin */
+    padding: 0; /* Menghilangkan padding */
+}
+
+/* Gaya untuk container utama */
+.container {
+    max-width: 1200px; /* Lebar maksimal container */
+    margin: 0 auto; /* Pusatkan container */
+    padding: 20px; /* Padding di dalam container */
+}
+
+/* Gaya untuk tabel */
+.table {
+    border: 2px solid #ccc; /* Border tabel */
+    border-collapse: collapse; /* Menggabungkan border tabel */
+    width: 100%; /* Lebar tabel 100% */
+    margin-top: 20px; /* Margin atas untuk jarak dengan elemen lain */
+}
+
+/* Gaya untuk header tabel */
+.table thead th {
+    background-color: #f0f0f0; /* Warna latar belakang header tabel */
+    font-weight: bold; /* Menebalkan teks header */
+    border: 2px solid #ccc; /* Border header tabel */
+}
+
+/* Gaya untuk sel tabel */
+.table tbody td {
+    border: 2px solid #ccc; /* Border untuk sel tabel */
+}
+
+/* Gaya untuk baris yang dihover */
+.table tbody tr:hover {
+    background-color: #e0e0e0; /* Warna latar belakang saat hover */
+}
+
+/* Gaya untuk status tabel */
+.table tbody td:nth-child(5) { /* Kolom Status */
+    text-transform: capitalize; /* Menyesuaikan teks menjadi huruf kecil pada huruf pertama */
+}
+
+/* Gaya untuk tombol kotak di pagination */
+.pagination .page-link {
+    border-radius: 0; /* Menghilangkan sudut melengkung */
+}
+
+/* Gaya untuk tombol pagination */
+.pagination .page-item {
+    margin-left: 5px; /* Jarak antar tombol pagination */
+}
+
+/* Gaya untuk responsif */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px; /* Padding lebih kecil untuk mobile */
+    }
+
+    .table {
+        font-size: 0.9em; /* Ukuran font tabel lebih kecil */
+    }
+
+    .pagination {
+        font-size: 0.8em; /* Ukuran font pagination lebih kecil */
+    }
+
+    .pagination .page-link {
+        padding: 5px 10px; /* Padding tombol pagination */
+    }
+}
+
+/* Responsif untuk tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .table {
+        font-size: 0.95em; /* Ukuran font tabel untuk tablet */
+    }
+
+    .pagination {
+        font-size: 0.9em; /* Ukuran font pagination untuk tablet */
+    }
+}
+
+/* Responsif untuk desktop */
+@media (min-width: 1024px) {
+    .table {
+        font-size: 1em; /* Ukuran font tabel untuk desktop */
+    }
+
+    .pagination {
+        font-size: 1em; /* Ukuran font pagination untuk desktop */
+    }
+}
