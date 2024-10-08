@@ -61,14 +61,14 @@ $gudangsForCurrentPage = array_slice($gudangs, $offset, $itemsPerPage); // Menga
             <table class="table table-bordered"> <!-- Tabel untuk menampilkan data gudang dengan border -->
                 <thead>
                     <tr>
-                        <th class="text-center" style="background-color: #007bff; color: white;">ID</th>
-                        <th class="text-center" style="background-color: #007bff; color: white;">Nama Gudang</th>
-                        <th class="text-center" style="background-color: #007bff; color: white;">Lokasi</th>
-                        <th class="text-center" style="background-color: #007bff; color: white;">Kapasitas</th>
-                        <th class="text-center" style="background-color: #007bff; color: white;">Status</th>
-                        <th class="text-center" style="background-color: #007bff; color: white;">Jam Buka</th>
-                        <th class="text-center" style="background-color: #007bff; color: white;">Jam Tutup</th>
-                        <th class="text-center" style="background-color: #007bff; color: white;"></th>
+                        <th class="text-center" style="background-color: #007bff; color: #fff;">ID</th>
+                        <th class="text-center" style="background-color: #007bff; color: #fff;">Nama Gudang</th>
+                        <th class="text-center" style="background-color: #007bff; color: #fff;">Lokasi</th>
+                        <th class="text-center" style="background-color: #007bff; color: #fff;">Kapasitas</th>
+                        <th class="text-center" style="background-color: #007bff; color: #fff;">Status</th>
+                        <th class="text-center" style="background-color: #007bff; color: #fff;">Jam Buka</th>
+                        <th class="text-center" style="background-color: #007bff; color: #fff;">Jam Tutup</th>
+                        <th class="text-center" style="background-color: #007bff; color: #fff;">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
