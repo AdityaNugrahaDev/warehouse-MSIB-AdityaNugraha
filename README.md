@@ -1,4 +1,4 @@
-SISTEM Warehouse MSIB
+Tugas SISTEM Warehouse MSIB
 
 Database schema:
 CREATE DATABASE warehouse_msib;
